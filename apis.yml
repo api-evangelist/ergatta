@@ -1,7 +1,15 @@
 aid: ergatta
 name: Ergatta
-description: Ergatta is a company surfaced as a portfolio company of techstars and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Ergatta is a connected-fitness company that makes game-based home rowing
+  machines, pairing WaterRower-derived water-resistance hardware handcrafted in
+  Rhode Island with a gamified software platform of interactive challenges
+  (Endeavor, Meteor, Wavelength), live and on-demand races, scenic rows, coached
+  classes, and custom workouts. Ergatta sells the Luxe and Lite rowers plus
+  upgrade kits for existing WaterRower and Concept2 machines, delivered through a
+  Shopify-hosted direct-to-consumer storefront with a membership subscription.
+  Ergatta does not publish a public developer API; this API Evangelist profile
+  captures its public web surface and identity for network discovery.
 url: https://raw.githubusercontent.com/api-evangelist/ergatta/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,11 +17,30 @@ x-backed-by:
 - techstars
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
+image: https://ergatta.com/cdn/shop/files/Ergatta_Mark_WithWordmark_White_e578b945-4a57-419f-b718-162f6c778d87_1200x1200.png?v=1658874243
 tags:
 - Company
+- Connected Fitness
+- Rowing
+- Fitness
+- Hardware
+- Gaming
+- Consumer
+- Direct to Consumer
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,3 +50,24 @@ maintainers:
 common:
 - type: Website
   url: https://ergatta.com/
+- type: About
+  url: https://ergatta.com/pages/about-us
+- type: Blog
+  url: https://ergatta.com/pages/blog-home
+- type: Support
+  url: https://ergatta.com/pages/faqs
+- type: HelpCenter
+  url: https://ergatta.com/pages/contact-us
+- type: TermsOfService
+  url: https://ergatta.com/pages/ergatta-terms-of-use
+- type: PrivacyPolicy
+  url: https://ergatta.com/pages/privacy-policy
+- type: DomainSecurity
+  url: security/ergatta-domain-security.yml
+- type: WellKnown
+  url: well-known/ergatta-well-known.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

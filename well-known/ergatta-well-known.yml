@@ -1,0 +1,22 @@
+generated: '2026-07-19'
+method: searched
+source: live probes of https://ergatta.com/.well-known/*
+host: https://ergatta.com
+note: >-
+  ergatta.com is a Shopify-hosted storefront; the OIDC/OAuth discovery documents
+  returned are Shopify's customer-account authentication surface (issuer
+  https://shopify.com/authentication/65752137954), not a first-party Ergatta
+  developer API. Captured verbatim as served from the host.
+documents:
+- path: /.well-known/openid-configuration
+  status: 200
+  file: ergatta-openid-configuration.json
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  file: ergatta-oauth-authorization-server.json
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
