@@ -2,21 +2,26 @@ generated: '2026-07-19'
 method: searched
 source: live probes of https://ergatta.com/.well-known/*
 host: https://ergatta.com
-note: >-
-  ergatta.com is a Shopify-hosted storefront; the OIDC/OAuth discovery documents
-  returned are Shopify's customer-account authentication surface (issuer
-  https://shopify.com/authentication/65752137954), not a first-party Ergatta
-  developer API. Captured verbatim as served from the host.
-documents:
-- path: /.well-known/openid-configuration
-  status: 200
-  file: ergatta-openid-configuration.json
-- path: /.well-known/oauth-authorization-server
-  status: 200
-  file: ergatta-oauth-authorization-server.json
-- path: /.well-known/security.txt
-  status: 404
-- path: /.well-known/api-catalog
-  status: 404
-- path: /.well-known/ai-plugin.json
-  status: 404
+note: ergatta.com is a Shopify-hosted storefront; the OIDC/OAuth discovery documents returned are Shopify's
+  customer-account authentication surface (issuer https://shopify.com/authentication/65752137954), not
+  a first-party Ergatta developer API. Captured verbatim as served from the host.
+hosts:
+- host: https://ergatta.com
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: ergatta-openid-configuration.json
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: ergatta-oauth-authorization-server.json
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
